@@ -1,0 +1,27 @@
+:root { --bg: #fbf8f1; --fg: #1d1d1f; --muted: #6e6e73; --accent: #1f4f99; --panel: #ffffff; --line: #e3dccd; --mincho: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
+@media (prefers-color-scheme: dark) { :root { --bg: #111111; --fg: #f5f5f7; --muted: #a1a1a6; --accent: #7ab8fa; --panel: #1c1c1e; --line: #3a3a3c; } }
+body { background: var(--bg); color: var(--fg); font-family: -apple-system, "Hiragino Sans", sans-serif; line-height: 1.8; margin: 0; }
+main { max-width: 640px; margin: 0 auto; padding: 24px 16px 64px; }
+a { color: var(--accent); }
+h1 { font-family: var(--mincho); font-size: 1.7rem; line-height: 1.4; margin: 0 0 4px; }
+h2 { font-size: 1.05rem; margin: 2em 0 0.5em; }
+.work { display: flex; gap: 20px; align-items: flex-start; }
+.cover { flex: none; width: 96px; aspect-ratio: 2 / 3; background: var(--ground); border-radius: 4px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); position: relative; overflow: hidden; font-family: var(--mincho); }
+.cover .slip { position: absolute; top: 8%; right: 14%; max-height: 62%; overflow: hidden; writing-mode: vertical-rl; background: #e8dbc4; color: #4a3324; font-weight: 600; font-size: 13px; line-height: 1.2; padding: 6px 3px; }
+.cover .by { position: absolute; bottom: 6%; left: 14%; writing-mode: vertical-rl; color: var(--author); font-size: 9px; max-height: 26%; overflow: hidden; }
+.subtitle, .author { margin: 0; }
+.subtitle { color: var(--muted); }
+.author { font-family: var(--mincho); font-size: 1.1rem; }
+.meta { color: var(--muted); font-size: 0.85rem; margin: 6px 0 0; }
+.player { margin: 24px 0 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; text-align: center; }
+.screen { min-height: 3.2em; display: flex; align-items: center; justify-content: center; font-family: var(--mincho); font-size: 2rem; line-height: 1.3; white-space: nowrap; overflow: hidden; }
+.screen .hint { font-family: -apple-system, "Hiragino Sans", sans-serif; font-size: 0.9rem; color: var(--muted); white-space: normal; }
+.play { margin-top: 8px; font: inherit; font-size: 0.95rem; padding: 6px 18px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.button { flex: 1 1 200px; text-align: center; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--accent); text-decoration: none; font-weight: 600; }
+.button.primary { background: var(--accent); color: var(--bg); }
+.note, .credit, footer { color: var(--muted); font-size: 0.85rem; }
+.excerpt p { font-family: var(--mincho); margin: 0 0 0.6em; text-indent: 1em; }
+footer { margin-top: 32px; }
+.index ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.index h2 { font-family: var(--mincho); }
